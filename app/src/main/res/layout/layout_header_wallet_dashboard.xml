@@ -5,72 +5,72 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="#7777"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200">
 
         <TextView
-            android:layout_marginTop="60dp"
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="crypto.com | DEFI WALLET"
+            android:paddingTop="20dp"
             android:textColor="#000000"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="crypto.com | DEFI WALLET" />
 
         <TextView
             android:id="@+id/tvAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            tools:text="$ 36.68 USD"
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="$ 36.68 USD" />
 
         <LinearLayout
             android:id="@+id/llButtons"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
             android:orientation="horizontal"
             android:weightSum="2"
-            android:layout_marginBottom="32dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvAmount">
 
             <ImageView
-                android:background="@drawable/circle_white_shape"
                 android:id="@+id/btnSend"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_marginEnd="20dp"
+                android:background="@drawable/circle_white_shape"
                 android:backgroundTint="@color/blue_color"
                 android:textColor="#FFFFFF" />
 
             <ImageView
-                android:background="@drawable/circle_white_shape"
                 android:id="@+id/btnReceive"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="20dp"
+                android:background="@drawable/circle_white_shape"
                 android:backgroundTint="@color/blue_color"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
 
-<View
-    android:id="@+id/bottomBg"
-    android:layout_width="match_parent"
-    android:background="@drawable/top_8_white_shape"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:layout_height="24dp"/>
+        <View
+            android:id="@+id/bottomBg"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@drawable/top_8_white_shape"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

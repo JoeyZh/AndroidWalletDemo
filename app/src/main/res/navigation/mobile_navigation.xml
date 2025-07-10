@@ -3,23 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_wallet">
+
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.joeyzh.android.walletdemo.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_wallet"
+        android:name="com.joeyzh.android.walletdemo.ui.wallet.WalletFragment"
+        android:label="@string/title_wallet"
+        tools:layout="@layout/fragment_wallet" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.joeyzh.android.walletdemo.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.joeyzh.android.walletdemo.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_defis"
+        android:name="com.joeyzh.android.walletdemo.ui.defis.DefisFragment"
+        android:label="@string/title_defi"
+        tools:layout="@layout/fragment_defis" />
 </navigation>

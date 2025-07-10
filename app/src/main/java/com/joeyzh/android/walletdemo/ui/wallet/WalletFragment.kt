@@ -1,28 +1,29 @@
-package com.joeyzh.android.walletdemo.ui.dashboard
+package com.joeyzh.android.walletdemo.ui.wallet
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.joeyzh.android.walletdemo.databinding.FragmentDashboardBinding
+import com.chad.library.adapter4.QuickAdapterHelper
+import com.joeyzh.android.walletdemo.databinding.FragmentWalletBinding
 
-class DashboardFragment : Fragment() {
+class WalletFragment : Fragment() {
 
-    private var _binding: FragmentDashboardBinding? = null
+    private var _binding: FragmentWalletBinding? = null
 
+//    lateinit var  mHelper: QuickAdapterHelper
     private val binding get() = _binding!!
 
     private val adapter by lazy {
         CurrencyItemAdapter()
     }
     val mViewModel by lazy {
-        ViewModelProvider(this)[DashboardViewModel::class.java]
+        ViewModelProvider(this)[WalletViewModel::class.java]
     }
 
     override fun onCreateView(
@@ -31,10 +32,10 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentDashboardBinding.inflate(inflater, container, false)
-        registerListener();
+        _binding = FragmentWalletBinding.inflate(inflater, container, false)
+        registerListener()
         val root: View = binding.root
-        registerListener();
+        registerListener()
         mViewModel.loadData()
         return root
     }
@@ -45,15 +46,16 @@ class DashboardFragment : Fragment() {
     }
 
     fun registerListener() {
-        mViewModel.mCurrencyViewDataMLV.observe(viewLifecycleOwner){
-            binding.rvWallet.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
-//        这里重绘会不停的加边距，所以去掉了
-//        binding.numRecycler.addItemDecoration(QuickGridSpaceDecoration(4, 10.dp))
+        mViewModel.mCurrencyViewDataMLV.observe(viewLifecycleOwner) {
+            binding.rvWallet.layoutManager =
+                LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+
             binding.rvWallet.adapter = adapter
             adapter.submitList(it)
         }
-        mViewModel.mUSDSum.observe(viewLifecycleOwner){
-
+        mViewModel.mUSDSum.observe(viewLifecycleOwner) {
+            Log.v("sum", "sum = " + it)
+            binding.header.tvAmount.text = "$ "+it + " USD"
         }
     }
 }

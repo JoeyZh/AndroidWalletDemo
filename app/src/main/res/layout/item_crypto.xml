@@ -2,8 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,12 +13,12 @@
         android:padding="4dp">
 
         <ImageView
-            android:id="@+id/iv_coins"
+            android:id="@+id/ivCoins"
             android:layout_width="48dp"
             android:layout_height="0dp"
             android:layout_marginVertical="8dp"
-            android:padding="4dp"
             android:contentDescription="@string/app_name"
+            android:padding="4dp"
             android:src="@drawable/logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
@@ -32,12 +31,12 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/iv_coins"
+            app:layout_constraintLeft_toRightOf="@id/ivCoins"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Basic Attention Token" />
 
         <TextView
-            android:id="@+id/tvCoinAmount"
+            android:id="@+id/tvCoinId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -48,13 +47,13 @@
             tools:text="BAT" />
 
         <TextView
-            android:id="@+id/tvCoinPrice"
+            android:id="@+id/tvCoinAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="6dp"
-            app:layout_constraintBottom_toBottomOf="@+id/tvCoinAmount"
-            app:layout_constraintRight_toLeftOf="@id/tvCoinAmount"
-            app:layout_constraintTop_toTopOf="@+id/tvCoinAmount"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCoinId"
+            app:layout_constraintRight_toLeftOf="@id/tvCoinId"
+            app:layout_constraintTop_toTopOf="@+id/tvCoinId"
             tools:text="67.87517775" />
 
         <TextView
@@ -63,8 +62,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:textColor="@color/textSecondary"
-            app:layout_constraintRight_toRightOf="@+id/tvCoinAmount"
-            app:layout_constraintTop_toBottomOf="@+id/tvCoinAmount"
+            app:layout_constraintRight_toRightOf="@+id/tvCoinId"
+            app:layout_constraintTop_toBottomOf="@+id/tvCoinId"
             tools:text="$ 18.20" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

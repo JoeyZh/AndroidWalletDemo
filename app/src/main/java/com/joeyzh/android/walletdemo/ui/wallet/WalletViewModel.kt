@@ -1,4 +1,4 @@
-package com.joeyzh.android.walletdemo.ui.dashboard
+package com.joeyzh.android.walletdemo.ui.wallet
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -12,7 +12,7 @@ import com.joeyzh.android.walletdemo.model.Wallet
 import com.joeyzh.android.walletdemo.utils.CurrencyUtils
 import kotlinx.coroutines.launch
 
-class DashboardViewModel(app: Application) : AndroidViewModel(app) {
+class WalletViewModel(app: Application) : AndroidViewModel(app) {
 
     val mockData by lazy {
         MockData()
