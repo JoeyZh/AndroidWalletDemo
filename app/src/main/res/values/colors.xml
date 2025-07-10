@@ -12,5 +12,6 @@
     <color name="textPrimary">#FF111111</color>
     <color name="textSecondary">#FF666666</color>
     <color name="divider_color">#ececec</color>
+    <color name="bg_color">#ffefefef</color>
 
 </resources>
