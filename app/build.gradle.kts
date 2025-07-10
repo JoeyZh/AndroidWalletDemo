@@ -36,6 +36,9 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    dataBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -51,4 +54,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // 三方库
+    implementation(libs.glide)
+    implementation(libs.gson)
+    implementation (libs.baserecyclerviewadapterhelper4)
+
 }
