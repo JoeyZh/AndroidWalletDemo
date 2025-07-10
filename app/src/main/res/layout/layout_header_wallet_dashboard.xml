@@ -38,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="48dp"
             android:orientation="horizontal"
             android:weightSum="2"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -48,18 +48,18 @@
 
             <ImageView
                 android:id="@+id/btnSend"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:layout_marginEnd="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="32dp"
                 android:background="@drawable/circle_white_shape"
                 android:backgroundTint="@color/blue_color"
                 android:textColor="#FFFFFF" />
 
             <ImageView
                 android:id="@+id/btnReceive"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:layout_marginStart="20dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
                 android:background="@drawable/circle_white_shape"
                 android:backgroundTint="@color/blue_color"
                 android:textColor="#FFFFFF" />

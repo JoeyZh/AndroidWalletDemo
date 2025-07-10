@@ -55,7 +55,7 @@ class WalletFragment : Fragment() {
         }
         mViewModel.mUSDSum.observe(viewLifecycleOwner) {
             Log.v("sum", "sum = " + it)
-            binding.header.tvAmount.text = "$ "+it + " USD"
+            binding.header.tvAmount.text = String.format("$ %.2f USD",it)
         }
     }
 }
