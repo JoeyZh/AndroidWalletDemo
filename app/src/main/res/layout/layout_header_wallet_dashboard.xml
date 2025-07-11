@@ -46,22 +46,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvAmount">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/btnSend"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="32dp"
+                android:padding="12dp"
                 android:background="@drawable/circle_white_shape"
                 android:backgroundTint="@color/blue_color"
+                app:srcCompat="@drawable/ic_send"
                 android:textColor="#FFFFFF" />
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/btnReceive"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:padding="12dp"
                 android:layout_marginStart="32dp"
                 android:background="@drawable/circle_white_shape"
                 android:backgroundTint="@color/blue_color"
+                app:srcCompat="@drawable/ic_receive"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
 
