@@ -35,7 +35,8 @@ class CurrencyItemAdapter :
                 return
             }
             tvCoinName.text = item.name
-            ivCoins.setUrl(item.imgUrl, R.drawable.logo)
+//            val test:String = "https://ytai-1311999090.cos.ap-beijing.myqcloud.com/mokki_new/initing.png";
+            ivCoins.setUrl( item.imgUrl, R.drawable.logo)
             tvCoinId.text = item.id
             tvCoinAmount.text = (item.wallet?.amount ?: 0).toString()
             tvUsdValue.text = '$' + (item.price).toString()
