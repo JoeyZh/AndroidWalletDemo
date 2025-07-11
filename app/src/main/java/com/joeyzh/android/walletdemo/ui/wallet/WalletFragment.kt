@@ -33,7 +33,6 @@ class WalletFragment : Fragment() {
     ): View {
 
         _binding = FragmentWalletBinding.inflate(inflater, container, false)
-        registerListener()
         val root: View = binding.root
         registerListener()
         mViewModel.loadData()
@@ -58,4 +57,5 @@ class WalletFragment : Fragment() {
             binding.header.tvAmount.text = String.format("$ %.2f USD",it)
         }
     }
+
 }
