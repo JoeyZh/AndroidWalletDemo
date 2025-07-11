@@ -72,7 +72,7 @@
         <View
             android:id="@+id/bottomBg"
             android:layout_width="match_parent"
-            android:layout_height="24dp"
+            android:layout_height="16dp"
             android:background="@drawable/top_8_white_shape"
             app:layout_constraintBottom_toBottomOf="parent" />
 

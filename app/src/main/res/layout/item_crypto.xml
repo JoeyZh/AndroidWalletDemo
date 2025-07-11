@@ -30,6 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
+            android:textColor="@color/textPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/ivCoins"
             app:layout_constraintTop_toTopOf="parent"
@@ -44,6 +45,7 @@
             app:layout_constraintBottom_toTopOf="@id/tvUsdValue"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/textPrimary"
             tools:text="BAT" />
 
         <TextView
@@ -51,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="6dp"
+            android:textColor="@color/textPrimary"
             app:layout_constraintBottom_toBottomOf="@+id/tvCoinId"
             app:layout_constraintRight_toLeftOf="@id/tvCoinId"
             app:layout_constraintTop_toTopOf="@+id/tvCoinId"

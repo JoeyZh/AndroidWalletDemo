@@ -53,6 +53,7 @@ class WalletViewModel(app: Application) : AndroidViewModel(app) {
                     id = it.coin_id,
                     price = price)
             }.toList()
+
             mUSDSum.value = list.sumOf { it.price }
             mCurrencyViewDataMLV.value = list
         }
